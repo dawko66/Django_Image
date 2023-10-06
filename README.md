@@ -14,7 +14,20 @@ steps:
 2.  Navigate to the directory where the **docker-compose.yml** file,
     containing the application configuration, is located.
 
-3.  Start the application by entering the following command:
+3. Create a text file containing:
+```
+#!/bin/sh
+
+echo "Apply database migrations"
+python manage.py migrate
+
+exec "$@"
+
+```
+
+and rename it along with its extension to ` entrypoint.sh `
+
+4. Start the application by entering the following command:
 
 > docker-compose up -d --build
 
