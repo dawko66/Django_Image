@@ -14,13 +14,23 @@ steps:
 2.  Navigate to the directory where the **docker-compose.yml** file,
     containing the application configuration, is located.
 
-3. Start the application by entering the following command:
+3. Create the `entrypoint.sh` file and change its contents in Visual Studio Code to:
+```
+#!/bin/sh
 
-> docker-compose up
+echo "Apply database migrations"
+python manage.py migrate
+exec "$@"
+
+```
+
+4. Start the application by entering the following command:
+
+> docker-compose up -d --build
 
 This command will launch the application in Docker containers on your local server.
 
-4. After a successful launch, the application will be accessible at
+5. After a successful launch, the application will be accessible at
     **http://localhost:8001**.
 
 **Available Links**
