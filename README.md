@@ -1,6 +1,6 @@
 ## Django Image Application
 
-The Markdown Application is a tool that allows you to add, browse, and
+The Django Image Application is a tool that allows you to add, browse, and
 manage images. Below, you will find instructions on how to run this
 application and the available links to different functionalities.
 
