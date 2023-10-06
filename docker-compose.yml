@@ -13,4 +13,4 @@ services:
       - SECRET_KEY=django-insecure-4v*ex1+wyquxn_f1#o)6%lmk5u-zqkpbp=h2=haz^@r=9j6_&$
       - ALLOWED_HOSTS=localhost,127.0.0.1
       - PORT=8001
-      - SERVER_TYPE = 'http'
+      - SERVER_TYPE=http
