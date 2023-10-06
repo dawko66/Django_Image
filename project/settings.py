@@ -25,18 +25,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # Dev
-SERVER_TYPE = 'http'
-PORT = 8000
-SECRET_KEY = 'django-insecure-4v*ex1+wyquxn_f1#o)6%lmk5u-zqkpbp=h2=haz^@r=9j6_&$'
-DEBUG = True
-ALLOWED_HOSTS = ['localhost']
+# SERVER_TYPE = 'http'
+# PORT = 8000
+# SECRET_KEY = 'django-insecure-4v*ex1+wyquxn_f1#o)6%lmk5u-zqkpbp=h2=haz^@r=9j6_&$'
+# DEBUG = True
+# ALLOWED_HOSTS = ['localhost']
 
 # Docker
-# SERVER_TYPE = os.environ.get('SERVER_TYPE')
-# PORT = os.environ.get('PORT')
-# SECRET_KEY = os.environ.get('SECRET_KEY')
-# DEBUG = os.environ.get('DEBUG')
-# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
+SERVER_TYPE = os.environ.get('SERVER_TYPE')
+PORT = os.environ.get('PORT')
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
 
 SERVER_URL = SERVER_TYPE + '://' + ALLOWED_HOSTS[0] + ':' + str(PORT) + '/'
 
