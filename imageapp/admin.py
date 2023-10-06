@@ -49,7 +49,7 @@ class ImageModelAdmin(admin.ModelAdmin):
         obj.original_url = base_url + obj.original_image.name.replace('original/', 'original', 1)
 
         if obj.active_time is not None:
-            active_time = datetime.datetime.now() + datetime.timedelta(seconds=300)
+            active_time = datetime.datetime.now() + datetime.timedelta(seconds=obj.active_time)
             obj.time_url = base_url + str(active_time) + obj.original_image.name.replace('original/', 'original', 1)
 
         obj.save()

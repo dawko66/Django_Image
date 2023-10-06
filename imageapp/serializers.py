@@ -60,7 +60,7 @@ class ImageSerializer(serializers.ModelSerializer):
 
             if group.name == 'Enterprise' and validated_data['active_time'] > 0:
                 image_obj.active_time = validated_data['active_time']
-                active_time = datetime.datetime.now() + datetime.timedelta(seconds=300)
+                active_time = datetime.datetime.now() + datetime.timedelta(seconds=image_obj.active_time)
 
                 image_obj.time_url = base_url + str(active_time) + image_obj.original_image.name.replace('original/', 'original', 1)
 
