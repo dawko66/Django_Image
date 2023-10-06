@@ -23,23 +23,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SERVER_IP = 'localhost'
+
+# Dev
 SERVER_TYPE = 'http'
+PORT = 8000
+SECRET_KEY = 'django-insecure-4v*ex1+wyquxn_f1#o)6%lmk5u-zqkpbp=h2=haz^@r=9j6_&$'
+DEBUG = True
+ALLOWED_HOSTS = ['localhost']
 
-# PORT = 8000
-# SECRET_KEY = 'django-insecure-4v*ex1+wyquxn_f1#o)6%lmk5u-zqkpbp=h2=haz^@r=9j6_&$'
-# DEBUG = True
-# ALLOWED_HOSTS = []
+# Docker
+# SERVER_TYPE = os.environ.get('SERVER_TYPE')
+# PORT = os.environ.get('PORT')
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# DEBUG = os.environ.get('DEBUG')
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
 
-
-PORT = 8001
-SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG')
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
-
-
-
-SERVER_URL = SERVER_TYPE + '://' + SERVER_IP + ':' + str(PORT) + '/'
+SERVER_URL = SERVER_TYPE + '://' + ALLOWED_HOSTS[0] + ':' + str(PORT) + '/'
 
 # Application definition
 

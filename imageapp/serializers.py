@@ -71,5 +71,3 @@ class ImageListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
         fields = ['small_url', 'medium_url', 'original_url', 'time_url']
-
-

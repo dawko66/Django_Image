@@ -39,7 +39,7 @@ Once the application is up and running, you can use the following links:
 
 -   **Login:** To log in to the application, use the link below:
 
-    -   [http://localhost:8001/api-auth/login/?next=/imageapp/api/](http://localhost:8000/api-auth/login/?next=/imageapp/api/)
+    -   [http://localhost:8001/api-auth/login/?next=/imageapp/api/](http://localhost:8001/api-auth/login/?next=/imageapp/api/)
 
     -   Login credentials:
 
@@ -53,12 +53,12 @@ Once the application is up and running, you can use the following links:
 
 -   **Add Images:** To upload new images, use the link below:
 
-    -   [http://localhost:8001/imageapp/api/images-upload/](http://localhost:8000/imageapp/api/images-upload/)
+    -   [http://localhost:8001/imageapp/api/images-upload/](http://localhost:8001/imageapp/api/images-upload/)
 
 -   **List Images:** To browse a list of available images, use the link
     below:
 
-    -   [http://localhost:8001/imageapp/api/images-list/](http://localhost:8000/imageapp/api/images-list/)
+    -   [http://localhost:8001/imageapp/api/images-list/](http://localhost:8001/imageapp/api/images-list/)
 
 The above links will lead you to different functionalities of the application, allowing you to make the most of its features.
 
